@@ -1,11 +1,11 @@
 terraform {
   backend "s3" {
-    dynamodb_table = "terraform-locks"
-    bucket         = "terraform-tfstate-payment"
+    dynamodb_table = "terraform-lock-table"
+    bucket         = "terraform-tfstate-bucket-bkt"
     encrypt        = true
     key            = "infrastructure/environments/com/ultimate-terraform-folder-strucutre/common.tfstate"
-    region         = "eu-north-1"
-    role_arn       = "arn:aws:iam::<bastion_account_id>:role/TerraformState"
+    region         = "us-east-1"
+ 
   }
 
   required_providers {
