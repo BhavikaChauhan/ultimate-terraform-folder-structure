@@ -21,13 +21,13 @@ provider "aws" {
   region              = var.aws_default_region
 
   assume_role {
-    role_arn = "arn:aws:iam::${var.aws_account_id}:role/AssumableAdmin"
+    role_arn = "arn:aws:iam::${var.aws_account_id}:role/TerraformAdminRole"
   }
 
   default_tags {
     tags = {
       terraform  = true
-      repository = "ultimate-terraform-folder-strucutre"
+      repository = "ultimate-terraform-folder-structure"
     }
   }
 }
